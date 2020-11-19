@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Textarea & Input Characters</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+</head>
+<body>
+    <div id="Mou-app" class="container">
+        <h4>Write your message ( {{ maxLenght }} Characters Allowed )</h4>
+        <textarea 
+            @input='countChars' 
+            v-model="message" 
+            :maxlength="maxLenght">
+        </textarea>
+        <span class="counter" :class="{'zero': reachZero}"> Left | <span>{{remainingChars}} </span></span>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
