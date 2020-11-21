@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Textarea & Input Characters</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+</head>
+
+<body>
+    <div class="container" id="Mou-app">
+        <input type="text" v-model="username"/>
+        <button @click="getRepos">Get Repos</button>
+        <div v-for="repo in repos">
+            <h4>{{ repo.name }}</h4>
+            <p>{{ repo.description }}</p>
+            <p>{{ repo.url }}</p>
+        </div>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
