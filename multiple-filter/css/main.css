@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+fieldset{
+    padding: 20px;
+    margin:0 130px;
+    display: inline;
+}
+ul{
+    padding: 50px;
+    list-style: none;
+    text-align: center;
+    background-color: darkslategrey;;
+}
+.List{ 
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.OutPut{
+    color: #cccccc;
+    font-weight: bold;
+    font-size: 20px;
+}

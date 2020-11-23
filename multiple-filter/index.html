@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Textarea & Input Characters</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+</head>
+
+<body>
+    <div id="app">
+        <fieldset>
+            <legend>price</legend>
+            {{start}}
+            <input type="range" v-model="start" :min="min" :max="max">
+            {{end}}
+            <input type="range" v-model="end" :min="min" :max="max">
+        </fieldset>
+
+        <fieldset>
+            <legend>color</legend>
+            <input type="radio" id="red" value="red" v-model="color">
+            <label for="red">red</label>
+            <br>
+
+            <input type="radio" id="yellow" value="yellow" v-model="color">
+            <label for="yellow">yellow</label>
+            <br>
+
+            <input type="radio" id="black" value="black" v-model="color">
+            <label for="black">black</label>
+            <br>
+
+            <input type="radio" id="blue" value="blue" v-model="color">
+            <label for="blue">blue</label>
+            <br>
+
+            <input type="radio" id="all" value="" v-model="color">
+            <label for="all">all</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>size</legend>
+            <input type="radio" id="all" value="" v-model="size">
+            <label for="all">all</label>
+            <br>
+
+            <input type="radio" id="small" value="small" v-model="size">
+            <label for="small">small</label>
+            <br>
+
+            <input type="radio" id="medium" value="medium" v-model="size">
+            <label for="medium">medium</label>
+            <br>
+            
+            <input type="radio" id="large" value="large" v-model="size">
+            <label for="large">large</label>
+            <br>
+        </fieldset>
+
+        <ul>
+            <li v-for="list in filterList">
+                <span class="List">Name is:</span> <span class="OutPut">{{list.name}}</span>
+                <span class="List">Price is:</span> <span class="OutPut">{{list.price}}</span>
+                <span class="List">Color is:</span> <span class="OutPut">{{list.color}}</span>
+                <span class="List">Size is:</span> <span class="OutPut">{{list.size}} </span><br><br> 
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
