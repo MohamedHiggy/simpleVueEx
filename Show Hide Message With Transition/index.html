@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Textarea & Input Characters</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+</head>
+
+<body>
+    <div class="container" id="Mou-app">
+        <button @click="message = !message">{{ message ? "Hide Message" : "Show Message" }}</button>
+        <transition name="bounce">
+            <div class="the-message" v-if="message">This Is An Alert!</div>
+        </transition>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

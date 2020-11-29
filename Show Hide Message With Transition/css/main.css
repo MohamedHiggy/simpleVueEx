@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  margin: 20px auto;
+  width: 1200px;
+  text-align: center;
+}
+.container .the-message {
+  padding: 20px;
+  background-color: #eee;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.bounce-enter-active {
+  -webkit-animation: bounce-in 0.5s;
+  animation: bounce-in 0.5s;
+}
+
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+
+@-webkit-keyframes bounce-in {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.links-urls {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+.links-urls .link {
+  padding: 10px 20px;
+  display: block;
+  background-color: #eee;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #777;
+}
